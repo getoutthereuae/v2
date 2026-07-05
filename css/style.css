@@ -436,3 +436,41 @@ body.menu-open .mobile-menu { transform: translateY(0); }
   .hero__scroll { display: none; }
   .race-banner__badge { position: static; display: inline-block; margin: 0 0 18px var(--pad); }
 }
+
+/* ---------- calendar page ---------- */
+.cal-layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(28px, 4vw, 64px); align-items: start; }
+.cal { border: 1px solid var(--dust); background: #fff; padding: clamp(18px, 2.4vw, 36px); }
+.cal__head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.cal__title { font-family: var(--display); text-transform: uppercase; font-size: clamp(26px, 3vw, 42px); line-height: 1; }
+.cal__title span { color: var(--gold); }
+.cal__nav { display: flex; gap: 8px; }
+.cal__btn { width: 40px; height: 40px; border: 1px solid var(--black); background: transparent; cursor: pointer; font-size: 17px; line-height: 1; display: grid; place-items: center; color: var(--black); transition: background .2s ease, color .2s ease; }
+.cal__btn:hover { background: var(--black); color: var(--gold); }
+.cal__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; }
+.cal__dow { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: #9a958c; text-align: center; padding: 6px 0 10px; }
+.cal__day { position: relative; aspect-ratio: 1/.92; display: flex; align-items: flex-start; justify-content: flex-end; padding: 7px 9px; font-size: 13.5px; color: var(--charcoal); border: 1px solid #f0eee8; background: transparent; }
+.cal__day.is-out { color: #c9c5bc; border-color: transparent; }
+.cal__day.is-today { border-color: var(--black); }
+.cal__day.has-events { cursor: pointer; font-weight: 600; color: var(--black); transition: background .2s ease; }
+.cal__day.has-events:hover { background: #f7f4ec; }
+.cal__day.has-events::after { content: ''; position: absolute; left: 9px; bottom: 9px; width: 7px; height: 7px; background: var(--gold); border-radius: 50%; }
+.cal__day.is-selected { background: var(--gold); border-color: var(--gold); color: var(--black); }
+.cal__day.is-selected:hover { background: var(--gold-light); }
+.cal__day.is-selected::after { background: var(--black); }
+.cal__foot { margin-top: 18px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.cal__foot span { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: #9a958c; }
+.cal-panel__title { font-family: var(--display); text-transform: uppercase; font-size: clamp(20px, 2.2vw, 30px); margin: 10px 0 20px; }
+.evt { display: flex; gap: 18px; padding: 16px 0; border-top: 1px solid var(--dust); }
+.evt:last-child { border-bottom: 1px solid var(--dust); }
+.evt__date { flex: 0 0 52px; text-align: center; }
+.evt__date b { display: block; font-family: var(--display); font-size: 26px; line-height: 1; color: var(--gold); }
+.evt__date span { font-family: var(--mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; }
+.evt__body h4 { font-size: 15px; margin-bottom: 3px; }
+.evt__body p { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; color: #7c7870; text-transform: uppercase; }
+.cal-note { font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em; color: #7c7870; padding: 22px 0; border-top: 1px solid var(--dust); border-bottom: 1px solid var(--dust); }
+.cal-panel .btn { margin-top: 26px; }
+@media (max-width: 860px) {
+  .cal-layout { grid-template-columns: 1fr; }
+  .cal__day { aspect-ratio: 1/.8; padding: 5px 7px; font-size: 12.5px; }
+  .cal__day.has-events::after { left: 7px; bottom: 6px; width: 6px; height: 6px; }
+}

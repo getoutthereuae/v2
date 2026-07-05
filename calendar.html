@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calendar — Get Out There UAE</title>
+<meta name="description" content="Every GOT ride, training session and tour in one place. Monthly schedule, live from the community calendar.">
+<link rel="canonical" href="https://www.getoutthereuae.com/calendar.html">
+<meta property="og:title" content="GOT Ride Calendar">
+<meta property="og:description" content="Every ride, training and tour — one schedule. All times UAE.">
+<meta property="og:image" content="https://www.getoutthereuae.com/assets/img/og-cover.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/GOT_Logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav__logo" href="index.html"><img src="assets/GOT_Logo.png" alt="Get Out There UAE"></a>
+  <div class="nav__links">
+    <a href="community.html">Community</a>
+    <a href="tours.html">Tours</a>
+    <a href="racing.html">Racing</a>
+    <a href="calendar.html" class="active">Calendar</a>
+    <a href="index.html#app">The App</a>
+    <a href="sponsors.html">Sponsors</a>
+    <a class="btn btn--gold" href="index.html#app">Get the App</a>
+  </div>
+  <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu">
+  <span class="label label--ondark">Menu</span>
+  <a href="index.html">Home</a>
+  <a href="community.html">Community</a>
+  <a href="tours.html">Tours</a>
+  <a href="racing.html">Racing</a>
+  <a href="calendar.html" class="active">Calendar</a>
+  <a href="index.html#app">The App</a>
+  <a href="sponsors.html">Sponsors</a>
+</div>
+
+<header class="hero hero--inner">
+  <div class="hero__media"><img src="assets/img/dunes-sunset.jpg" alt="Riders crossing the dunes at sunset" data-parallax fetchpriority="high"></div>
+  <div class="hero__content">
+    <span class="label label--ondark">The Calendar</span>
+    <h1 class="display h-giant">Never miss<br><span class="gold">a ride</span></h1>
+    <p class="hero__sub">Every ride, training and tour. One schedule.</p>
+  </div>
+</header>
+
+<!-- CALENDAR -->
+<section class="section">
+  <div class="section__head reveal">
+    <span class="label">Schedule</span>
+    <h2 class="display h-xl">Ride days</h2>
+    <hr class="gold-rule">
+  </div>
+  <div class="cal-layout">
+    <div class="cal reveal" id="cal">
+      <div class="cal__head">
+        <div class="cal__title" id="calTitle">&nbsp;</div>
+        <div class="cal__nav">
+          <button class="cal__btn" id="calPrev" aria-label="Previous month">&larr;</button>
+          <button class="cal__btn" id="calNext" aria-label="Next month">&rarr;</button>
+        </div>
+      </div>
+      <div class="cal__grid" id="calGrid" role="grid" aria-label="Monthly event calendar"></div>
+      <div class="cal__foot">
+        <span>&bull; Gold dot = ride day</span>
+        <span>All times UAE (GST)</span>
+      </div>
+    </div>
+    <aside class="cal-panel reveal reveal-d1">
+      <span class="label">What's on</span>
+      <h3 class="cal-panel__title" id="panelTitle">Upcoming</h3>
+      <div id="panelList"></div>
+      <a class="btn btn--outline" href="index.html#app">Book your spot on the App</a>
+    </aside>
+  </div>
+</section>
+
+<!-- BIG CTA -->
+<section class="big-cta">
+  <img src="assets/img/roadbook-sunset.jpg" alt="Roadbook silhouette at sunset" loading="lazy">
+  <div class="big-cta__content reveal">
+    <span class="label label--ondark">Pick a date. We'll handle the rest.</span>
+    <h2 class="display h-giant">See you<br><span class="gold">out there</span></h2>
+    <div class="hero__ctas">
+      <a class="btn btn--gold" href="https://apps.apple.com/app/id1624915432">Download the App</a>
+      <a class="btn btn--ghost" href="https://wa.me/971556340840">Join WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <img src="assets/GOT_logo_white.png" alt="Get Out There UAE">
+      <p>The largest structured offroad adventure riding community in the UAE.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="racing.html">Racing</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="index.html#app">The App</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Ride</h4>
+      <ul>
+        <li><a href="https://apps.apple.com/app/id1624915432">App Store</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.dcodax.got.app">Google Play</a></li>
+        <li><a href="https://braaap.ae">braaap.ae</a></li>
+        <li><a href="https://www.emiratesadvrally.com">Rally Raid</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:info@getoutthereuae.com">info@getoutthereuae.com</a></li>
+        <li><a href="tel:+971556340840">+971 55 63 40840</a></li>
+        <li><a href="https://instagram.com/GetOutThereUAE">@GetOutThereUAE</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bar">
+    <span>© <span data-year>2026</span> Get Out There UAE · Dubai</span>
+    <span>Discover the other side</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/calendar.js"></script>
+</body>
+</html>
